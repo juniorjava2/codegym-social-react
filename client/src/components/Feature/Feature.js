@@ -50,7 +50,7 @@ export const Feature = ({ onChange, login, logout }) => {
                 <MessageIcn src={MessageIcon} alt="Upvoter" />
               </Icons>
             </IconsContainer>
-            <EText>Upvote or Downvote Answers</EText>
+            <EText>Share your thoughts</EText>
           </EBody>
           <EBody>
             <IconsContainer>

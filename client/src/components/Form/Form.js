@@ -2,7 +2,7 @@ import { Button } from "../Buttons/Button";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FormContainer, Label, TextContainer, TextField } from "./FormStyle";
-
+import { Modal } from "../Modal/Modal";
 import axios from "axios";
 import { useAuth, AuthConsumer } from "../../hooks/useAuth";
 
@@ -52,29 +52,6 @@ export const Form = () => {
     });
   };
 
-  //checking the current login status
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:3001/auth/auth", {
-  //       headers: {
-  //         accessToken: localStorage.getItem("accessToken"),
-  //       },
-  //     })
-  //     .then((response) => {
-  //       if (response.data.error) {
-  //         setAuthStatus({ ...authStatus, isAuth: false });
-  //         console.log(authStatus);
-  //       } else {
-  //         setAuthStatus({
-  //           username: response.data.username,
-  //           id: response.data.id,
-  //           isAuth: true,
-  //         });
-  //         console.log(response.data);
-  //       }
-  //     });
-  //   console.log(authStatus);
-  // }, []);
   useEffect(() => {
     console.log(authStatus.isAuth);
   }, []);
@@ -149,9 +126,12 @@ export const Form = () => {
                           setPassword(event.target.value);
                         }}
                       />
-                      <button onClick={() => setShown(!shown)}>
+                      {/* <button
+                        onClick={() => setShown(!shown)}
+                        styles={`width:14px`}
+                      >
                         Show/Hide
-                      </button>
+                      </button> */}
 
                       <Button label="Login" onClick={login}>
                         {/* <Ripple color="#b7cadb" /> */}

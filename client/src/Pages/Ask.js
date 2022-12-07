@@ -14,7 +14,7 @@ export default function Ask() {
         <Modal
           message={"Question Successfully created"}
           color="lightgreen"
-          show={true}
+          show={false}
         />
         <LeftSide>
           <PageTitle title="Ask Your Question..." />

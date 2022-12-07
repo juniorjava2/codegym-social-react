@@ -28,7 +28,7 @@ export const Footer = () => {
             Do you wish to know what people search most online? Then Subscribe
             to our Newsletter to get more than just that.
           </p>
-          <TextInput type="password" placeholder="Enter your email" />
+          <TextInput type="email" placeholder="Enter your email" />
         </MiddlePart>
         <RightPart>
           <h2>Links</h2>
